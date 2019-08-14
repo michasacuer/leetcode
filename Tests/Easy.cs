@@ -73,7 +73,7 @@ namespace Tests
             var result = solution.ShortestToChar("loveleetcode", 'e');
             var expected = new int[] { 3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0 };
 
-            result.ShouldBe(expected)
+            result.ShouldBe(expected);
         }
 
         [Fact]
@@ -90,6 +90,24 @@ namespace Tests
             var input2 = new int[4][] { new int[4] { 1, 1, 0, 0 }, new int[4] { 1, 0, 0, 1 }, new int[4] { 0, 1, 1, 1 }, new int[4] { 1, 0, 1, 0 } };
             var result2 = solution.FlipAndInvertImage(input2);
             var expected2 = new int[4][] { new int[4] { 1, 1, 0, 0 }, new int[4] { 0, 1, 1, 0 }, new int[4] { 0, 0, 0, 1 }, new int[4] { 1, 0, 1, 0 } };
+
+            result2.ShouldBe(expected2);
+        }
+
+        [Fact]
+        public void Solution_867()
+        {
+            var solution = new Solution_867();
+
+            var input1 = new int[3][] { new int[3] { 1, 2, 3 }, new int[3] { 4, 5, 6 }, new int[3] { 7, 8, 9 } };
+            var result1 = solution.Transpose(input1);
+            var expected1 = new int[3][] { new int[3] { 1, 4, 7 }, new int[3] { 2, 5, 8 }, new int[3] { 3, 6, 9 } };
+
+            result1.ShouldBe(expected1);
+
+            var input2 = new int[2][] { new int[3] { 1, 2, 3 }, new int[3] { 4, 5, 6 } };
+            var result2 = solution.Transpose(input2);
+            var expected2 = new int [3][] { new int[2] { 1, 4 }, new int[2] { 2, 5 }, new int[2] { 3, 6 } };
 
             result2.ShouldBe(expected2);
         }
