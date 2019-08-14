@@ -45,6 +45,23 @@ namespace Tests
             result2.ShouldBe(0);
         }
 
+        [Fact]
+        public void Solution_832()
+        {
+            var solution = new Solution_832();
+
+            var input1 = new int[3][] { new int[3] { 1, 1, 0 }, new int[3] { 1, 0, 1 }, new int[3] { 0, 0, 0 } };
+            var result1 = solution.FlipAndInvertImage(input1);
+            var expected1 = new int[3][] { new int[3] { 1, 0, 0 }, new int[3] { 0, 1, 0 }, new int[3] { 1, 1, 1 } };
+
+            result1.ShouldBe(expected1);
+
+            var input2 = new int[4][] { new int[4] { 1, 1, 0, 0 }, new int[4] { 1, 0, 0, 1 }, new int[4] { 0, 1, 1, 1 }, new int[4] { 1, 0, 1, 0 } };
+            var result2 = solution.FlipAndInvertImage(input2);
+            var expected2 = new int[4][] { new int[4] { 1, 1, 0, 0 }, new int[4] { 0, 1, 1, 0 }, new int[4] { 0, 0, 0, 1 }, new int[4] { 1, 0, 1, 0 } };
+
+            result2.ShouldBe(expected2);
+        }
 
         [Fact]
         public void Solution_1108()
