@@ -1,4 +1,6 @@
-﻿namespace Easy
+﻿//Given a 32-bit signed integer, reverse digits of an integer.
+
+namespace Easy
 {
     public class Solution_7
     {
