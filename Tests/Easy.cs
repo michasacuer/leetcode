@@ -34,6 +34,15 @@ namespace Tests
         }
 
         [Fact]
+        public void Solution_557()
+        {
+            var solution = new Solution_557();
+            var result = solution.ReverseWords("Let's take LeetCode contest");
+
+            result.ShouldBe("s'teL ekat edoCteeL tsetnoc");
+        }
+
+        [Fact]
         public void Solution_728()
         {
             var solution = new Solution_728();
