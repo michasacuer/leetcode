@@ -1,6 +1,7 @@
-using Easy;
+using System.Collections.Generic;
 using Shouldly;
 using Xunit;
+using Easy;
 
 namespace Tests
 {
@@ -30,6 +31,17 @@ namespace Tests
             result1.ShouldBe(321);
             result2.ShouldBe(21);
             result3.ShouldBe(-321);
+        }
+
+        [Fact]
+        public void Solution_728()
+        {
+            var solution = new Solution_728();
+            var result = solution.SelfDividingNumbers(1, 22);
+            var expected = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22 };
+
+            result = (List<int>)result;
+            result.ShouldBe(expected);
         }
 
         [Fact]
