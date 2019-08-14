@@ -1,6 +1,5 @@
 using Easy;
 using Shouldly;
-using System;
 using Xunit;
 
 namespace Tests
@@ -80,6 +79,23 @@ namespace Tests
             result1.ShouldBe(3);
             result2.ShouldBe(2);
             result3.ShouldBe(5);
+        }
+
+        [Fact]
+        public void Solution_977()
+        {
+            var solution = new Solution_977();
+
+            var input1 = new int[5] { -4, -1, 0, 3, 10 };
+            var result1 = solution.SortedSquares(input1);
+            var expected1 = new int[5] { 0, 1, 9, 16, 100 };
+
+            var input2 = new int[5] { -7, -3, 2, 3, 11 };
+            var result2 = solution.SortedSquares(input2);
+            var expected2 = new int[5] { 4, 9, 9, 49, 121 };
+
+            result1.ShouldBe(expected1);
+            result2.ShouldBe(expected2);
         }
 
         [Fact]
