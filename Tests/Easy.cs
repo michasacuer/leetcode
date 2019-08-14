@@ -66,6 +66,17 @@ namespace Tests
         }
 
         [Fact]
+        public void Solution_821()
+        {
+            var solution = new Solution_821();
+
+            var result = solution.ShortestToChar("loveleetcode", 'e');
+            var expected = new int[] { 3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0 };
+
+            result.ShouldBe(expected)
+        }
+
+        [Fact]
         public void Solution_832()
         {
             var solution = new Solution_832();
