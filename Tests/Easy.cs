@@ -149,6 +149,16 @@ namespace Tests
         }
 
         [Fact]
+        public void Solution_1047()
+        {
+            var solution = new Solution_1047();
+
+            var result = solution.RemoveDuplicates("abbaca");
+
+            result.ShouldBe("ca");
+        }
+
+        [Fact]
         public void Solution_1108()
         {
             var solution = new Solution_1108();
