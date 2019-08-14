@@ -64,6 +64,25 @@ namespace Tests
         }
 
         [Fact]
+        public void Solution_961()
+        {
+            var solution = new Solution_961();
+
+            var input1 = new int[4] { 1, 2, 3, 3 };
+            var result1 = solution.RepeatedNTimes(input1);
+
+            var input2 = new int[6] { 2, 1, 2, 5, 3, 2 };
+            var result2 = solution.RepeatedNTimes(input2);
+
+            var input3 = new int[8] { 5, 1, 5, 2, 5, 3, 5, 4 };
+            var result3 = solution.RepeatedNTimes(input3);
+
+            result1.ShouldBe(3);
+            result2.ShouldBe(2);
+            result3.ShouldBe(5);
+        }
+
+        [Fact]
         public void Solution_1108()
         {
             var solution = new Solution_1108();
