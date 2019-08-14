@@ -8,6 +8,19 @@ namespace Tests
     public class Easy
     {
         [Fact]
+        public void Solution_1()
+        {
+            var solution = new Solution_1();
+            var nums = new int[] { 2, 7, 11, 15 };
+            var result = solution.TwoSum(nums, 9);
+
+            var expected = new int[] { 0, 1 };
+
+            result[0].ShouldBe(expected[0]);
+            result[1].ShouldBe(expected[1]);
+        }
+
+        [Fact]
         public void Solution_7()
         {
             var solution = new Solution_7();
@@ -21,17 +34,17 @@ namespace Tests
         }
 
         [Fact]
-        public void Solution_1()
+        public void Solution_771()
         {
-            var solution = new Solution_1();
-            var nums = new int[] { 2, 7, 11, 15 };
-            var result = solution.TwoSum(nums, 9);
+            var solution = new Solution_771();
 
-            var expected = new int[] { 0, 1 };
+            var result1 = solution.NumJewelsInStones("aA", "aAAbbbb");
+            var result2 = solution.NumJewelsInStones("z", "ZZ");
 
-            result[0].ShouldBe(expected[0]);
-            result[1].ShouldBe(expected[1]);
+            result1.ShouldBe(3);
+            result2.ShouldBe(0);
         }
+
 
         [Fact]
         public void Solution_1108()
