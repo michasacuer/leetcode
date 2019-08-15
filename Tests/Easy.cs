@@ -155,6 +155,22 @@ namespace Tests
         }
 
         [Fact]
+        public void Solution_888()
+        {
+            var solution = new Solution_888();
+
+            var result1 = solution.FairCandySwap(new int[2] { 1, 1 }, new int[2] { 2, 2 });
+            var result2 = solution.FairCandySwap(new int[2] { 1, 2 }, new int[2] { 2, 3 });
+            var result3 = solution.FairCandySwap(new int[1] { 2 }, new int[2] { 1, 3 });
+            var result4 = solution.FairCandySwap(new int[3] { 1, 2, 5 }, new int[2] { 2, 4 });
+
+            result1.ShouldBe(new int[2] { 1, 2 });
+            result2.ShouldBe(new int[2] { 1, 2 });
+            result3.ShouldBe(new int[2] { 2, 3 });
+            result4.ShouldBe(new int[2] { 5, 4 });
+        }
+
+        [Fact]
         public void Solution_961()
         {
             var solution = new Solution_961();
