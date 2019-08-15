@@ -70,6 +70,32 @@ namespace Tests
         }
 
         [Fact]
+        public void Solution_766()
+        {
+            var solution = new Solution_766();
+
+            var input1 = new int[3][] { new int[4] { 1, 2, 3, 4 }, new int[4] { 5, 1, 2, 3 }, new int[4] { 9, 5, 1, 2 } };
+            var result1 = solution.IsToeplitzMatrix(input1);
+
+
+            var input2 = new int[2][] { new int[2] { 1, 2 }, new int[2] { 2, 2 } };
+            var result2 = solution.IsToeplitzMatrix(input2);
+
+            var input3 = new int[3][] 
+            {
+                new int[7] { 36, 59, 71, 15, 26, 82, 87 },
+                new int[7] { 56, 36, 59, 71, 15, 26, 82 },
+                new int[7] { 15, 0, 36, 59, 71, 15, 26 }
+            };
+            var result3 = solution.IsToeplitzMatrix(input3);
+
+            result1.ShouldBe(true);
+            result2.ShouldBe(false);
+            result3.ShouldBe(false);
+
+        }
+
+        [Fact]
         public void Solution_771()
         {
             var solution = new Solution_771();
