@@ -43,6 +43,22 @@ namespace Tests
         }
 
         [Fact]
+        public void Solution_566()
+        {
+            var solution = new Solution_566();
+
+            var input1 = new int[2][] { new int[2] { 1, 2 }, new int[2] { 3, 4 } };
+            var result1 = solution.MatrixReshape(input1, 1, 4);
+            var expected1 = new int[1][] { new int[4] { 1, 2, 3, 4 } };
+
+            result1.ShouldBe(expected1);
+
+            var result2 = solution.MatrixReshape(input1, 2, 4);
+
+            result2.ShouldBe(input1);
+        }
+
+        [Fact]
         public void Solution_728()
         {
             var solution = new Solution_728();
