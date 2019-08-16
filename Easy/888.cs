@@ -22,13 +22,41 @@
 //Input: A = [1, 2, 5], B = [2, 4]
 //Output: [5,4]
 
+using System;
+using System.Collections.Generic;
+
 namespace Easy
 {
     public class Solution_888
     {
         public int[] FairCandySwap(int[] A, int[] B)
         {
-            throw new System.NotImplementedException();
+            int aSum = 0;
+            int bSum = 0;
+
+            var setB = new HashSet<int>(B);
+
+            for (int i = 0; i < A.Length; i ++)
+            {
+                aSum += A[i];
+            }
+
+            for (int i = 0; i <B.Length; i++)
+            {
+                bSum += B[i];
+            }
+
+            int delta = (bSum - aSum) / 2;
+
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (setB.Contains(A[i] + delta))
+                {
+                    return new int[2] { A[i], A[i] + delta };
+                }
+            }
+
+            throw new Exception();
         }
     }
 }
