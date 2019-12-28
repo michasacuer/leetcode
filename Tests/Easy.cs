@@ -207,6 +207,17 @@ namespace Tests
         }
 
         [Fact]
+        public void Solution_922()
+        {
+            var solution = new Solution_922();
+
+            var A = new int[] { 4, 2, 5, 7 };
+            var result = solution.SortArrayByParityII(A);
+
+            result.ShouldBe(new int[] { 4, 5, 2, 7 });
+        }
+
+        [Fact]
         public void Solution_1047()
         {
             var solution = new Solution_1047();
